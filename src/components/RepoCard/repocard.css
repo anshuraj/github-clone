@@ -1,0 +1,22 @@
+.repocard {
+  padding: 20px 0;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.repocard h3 {
+  font-size: 20px;
+}
+
+.repocard h3 a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.repocard .info {
+  display: flex;
+  align-items: center;
+}
+
+.repocard .info * {
+  margin-right: 20px;
+}

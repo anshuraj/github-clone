@@ -1,0 +1,24 @@
+.main {
+  padding: 20px 20px 20px 0;
+}
+
+.filter input {
+  width: 50%;
+  padding: 5px;
+  height: 25px;
+  font-size: 14px;
+}
+
+.filter select {
+  height: 35px;
+  font-size: 14px;
+}
+
+.filter * {
+  margin-right: 15px;
+}
+
+.filter button {
+  font-size: 16px;
+  height: 35px;
+}

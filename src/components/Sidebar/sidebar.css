@@ -1,0 +1,31 @@
+.sidebar {
+  padding: 20px;
+}
+
+.sidebar img {
+  height: 260px;
+  width: 260px;
+}
+
+.sidebar .namecard {
+  margin: 20px 0;
+}
+
+.sidebar .namecard .name {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.sidebar .namecard .uname {
+  font-size: 20px;
+  font-weight: 300;
+  color: #666;
+}
+
+.sidebar .desc {
+  margin: 20px 0;
+}
+
+.sidebar .desc * {
+  margin: 5px 0;
+}
