@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { useDispatch, connect } from 'react-redux';
+import { fetchUser } from '../../redux/actions/user';
+
 import './sidebar.css';
 
 const Sidebar = ({ user }) => {
+  let { username } = useParams();
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchUser(username));
+  }, [dispatch, username]);
+
+  if (!user) {
+    return <></>;
+  }
+
   return (
     <div className="sidebar">
       <div className="usercard">
@@ -22,4 +37,6 @@ const Sidebar = ({ user }) => {
   );
 };
 
-export default Sidebar;
+const mapStateToProps = (state) => ({ user: state.user.user });
+
+export default connect(mapStateToProps)(Sidebar);
