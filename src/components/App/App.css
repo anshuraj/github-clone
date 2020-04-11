@@ -1,4 +1,10 @@
 .App {
   display: grid;
-  grid-template-columns: 30% auto;
+  grid-template-columns: 25% auto;
+}
+
+@media all and (max-width: 768px) {
+  .App {
+    grid-template-columns: auto;
+  }
 }

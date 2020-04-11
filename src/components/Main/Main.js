@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import RepoCard from '../RepoCard/RepoCard';
 import './main.css';
 
-const userName = 'anshuraj';
-
 const Main = () => {
-  const [repos, setRepos] = useState(null);
+  const [repos, setRepos] = useState([]);
   const [reposCopy, setReposCopy] = useState(null);
   const [languages, setLanguages] = useState([]);
-
   const [keyword, setKeyword] = useState('');
+  let { username } = useParams();
 
   useEffect(() => {
-    fetch(` https://api.github.com/users/${userName}/repos`)
+    fetch(` https://api.github.com/users/${username}/repos`)
       .then((res) => res.json())
       .then((res) => {
         setRepos(res);
@@ -91,6 +90,17 @@ const Main = () => {
 
   return (
     <div className="main">
+      <div className="tabs">
+        <div>Overview</div>
+        <div className="active">
+          Repositories <span>{repos.length}</span>
+        </div>
+        <div>Project</div>
+        <div>Stars</div>
+        <div>Followers</div>
+        <div>Following</div>
+      </div>
+
       <div className="filter">
         <input
           placeholder="Find a repository..."
@@ -117,7 +127,6 @@ const Main = () => {
             </option>
           ))}
         </select>
-        <button>New</button>
       </div>
       {(reposCopy || []).map((repo) => (
         <RepoCard key={repo.name} repo={repo} />

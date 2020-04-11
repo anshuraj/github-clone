@@ -4,10 +4,12 @@ import './sidebar.css';
 const Sidebar = ({ user }) => {
   return (
     <div className="sidebar">
-      <img src={user.avatar_url} alt="avatar" />
-      <div className="namecard">
-        <div className="name">{user.name}</div>
-        <div className="uname">{user.login}</div>
+      <div className="usercard">
+        <img src={user.avatar_url} alt="avatar" />
+        <div className="namecard">
+          <div className="name">{user.name}</div>
+          <div className="uname">{user.login}</div>
+        </div>
       </div>
       <button>Follow</button>
       <div className="desc">

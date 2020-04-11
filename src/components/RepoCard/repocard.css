@@ -5,6 +5,7 @@
 
 .repocard h3 {
   font-size: 20px;
+  margin: 0 0px 10px 0;
 }
 
 .repocard h3 a {
@@ -15,8 +16,15 @@
 .repocard .info {
   display: flex;
   align-items: center;
+  color: #586069;
 }
 
 .repocard .info * {
   margin-right: 20px;
+  font-size: 12px;
+}
+
+.repocard .desc {
+  font-size: 14px;
+  margin-bottom: 10px;
 }

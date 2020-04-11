@@ -1,5 +1,5 @@
 .main {
-  padding: 20px 20px 20px 0;
+  padding: 20px;
 }
 
 .filter input {
@@ -13,12 +13,38 @@
   height: 35px;
   font-size: 14px;
 }
-
+.filter {
+  padding: 20px 0;
+  border-bottom: 1px solid #e1e4e8;
+}
 .filter * {
   margin-right: 15px;
 }
 
-.filter button {
-  font-size: 16px;
-  height: 35px;
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.tabs div {
+  padding: 20px;
+}
+
+.active {
+  border-bottom: 2px solid #e36209;
+  font-weight: 500;
+}
+
+.active span {
+  font-size: 12px;
+  background: rgba(27, 31, 35, 0.08);
+  border-radius: 20px;
+  padding: 2px 5px;
+}
+
+@media all and (max-width: 768px) {
+  .main .filter input {
+    width: 95%;
+    margin-bottom: 10px;
+  }
 }
